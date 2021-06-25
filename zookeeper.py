@@ -122,13 +122,13 @@ It looks like we will soon have more rabbits!"""
 # array that contains the animals habitats
 animals = [camel, lion, deer, goose, bat, rabbit]
 
-# input inserted by the user
-choice = input("Please enter the number of the habitat you would like to view:")
-
 # loop until input is exit
-while choice != "exit":
-    print(animals[int(choice)])  # converts input to int, and it goes as an index
-    choice = input()  # re-asks the user for the input
+while True:
+    choice = input("Please enter the number of the habitat you would like to view: ")  # input inserted by the user
+    if choice != "exit":
+        print(animals[int(choice)])  # converts input to int, and it goes as an index
+    else:
+        break
 
 # exit output
 print("See you later!")
